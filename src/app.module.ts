@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import { ThrottlerModule } from '@nestjs/throttler';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -8,6 +9,10 @@ import { AppService } from './app.service';
     ConfigModule.forRoot({
       isGlobal: true,
       cache: true
+    }),
+    ThrottlerModule.forRoot({
+      ttl: 60,
+      limit: 10
     })
   ],
   controllers: [AppController],
