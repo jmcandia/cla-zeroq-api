@@ -12,6 +12,10 @@ To run this project, you will need to add the following environment variables to
 
 `ZEROQ_TOKEN`
 
+`ENV_SDK`
+
+`ENV_URL_SDK`
+
 ## Installation
 
 ```bash
@@ -75,10 +79,6 @@ GET /api
 ```http
 GET /api/zeroq/offices
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
