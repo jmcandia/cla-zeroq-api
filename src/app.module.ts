@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ZeroQModule } from './modules/zeroq/zeroq.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { AppService } from './app.service';
     ThrottlerModule.forRoot({
       ttl: 60,
       limit: 10
-    })
+    }),
+    ZeroQModule
   ],
   controllers: [AppController],
   providers: [AppService]
